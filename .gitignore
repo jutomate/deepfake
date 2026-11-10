@@ -1,0 +1,16 @@
+# Python / Environments
+venv/
+__pycache__/
+*.pyc
+
+# Heavy weights and cache
+.cache/
+*.onnx
+*.bin
+*.safetensors
+
+# Media outputs (optional - omit if you want to push them)
+*.wav
+*.mp4
+*.mov
+*.jpg 'n01_facefusion/
