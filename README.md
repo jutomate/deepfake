@@ -20,10 +20,14 @@ This repository contains an end-to-end Proof of Concept (POC) evaluating open-so
 - Model: dima806/deepfake_vs_real_image_detection
 - Script: 03_detection/detect.py
 - Pipeline: Extracts sampled frames (1 FPS) from both authentic and manipulated footage, assesses pixel boundary artifacts, and calculates aggregate forgery probability scores.
+- Benchmark Results:
+  - Original Video Forgery Score: 8.21% (PASS / Authentic)
+  - Doctored Video Forgery Score: 0.09% (EVASION / False Negative)
+  - Forensic Takeaway: Full-frame spatial classification fails against blended face swaps; facial cropping and temporal analysis are required.
 ## Artifact Merging
 The final output (doctored_final.mp4) multiplexes the face-swapped video stream with the cloned vocal audio track using FFmpeg stream mapping without re-encoding quality degradation.
 ## Directory Layout
 - 01_facefusion/: Configuration and setup for visual swapping.
 - 02_audio_xtts/: Audio synthesis scripts and voice sample references.
 - 03_detection/: Frame extraction pipeline and comparative detection benchmark.
-- .gitignore: Excludes virtual environments, model weights, and media artifacts.
+- .gitignore: Excludes virtual environments, model weights, and media artifacts. 
